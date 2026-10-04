@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://govindjocose006.github.io/sitemap.xml
