@@ -109,7 +109,13 @@ function selectSlide(index, manual = false) {
 document.querySelector('#slide-previous').addEventListener('click', () => selectSlide(activeSlide - 1, true));
 document.querySelector('#slide-next').addEventListener('click', () => selectSlide(activeSlide + 1, true));
 dots.forEach(dot => dot.addEventListener('click', () => selectSlide(Number(dot.dataset.slide), true)));
-pauseButton.addEventListener('click', () => { userPaused = !userPaused; scheduleSlides(); });
+pauseButton.addEventListener('click', () => {
+  userPaused = !userPaused;
+  // An explicit Play request resumes even while this button retains focus/hover.
+  // A subsequent focus or pointer entry will suspend automatic movement again.
+  if (!userPaused) { focused = false; hovered = false; }
+  scheduleSlides();
+});
 carousel.addEventListener('mouseenter', () => { hovered = true; scheduleSlides(); });
 carousel.addEventListener('mouseleave', () => { hovered = false; scheduleSlides(); });
 carousel.addEventListener('focusin', () => { focused = true; scheduleSlides(); });

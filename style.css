@@ -19,3 +19,19 @@
 @media(max-width:850px){.hero-slide .hero-image{min-height:455px}.lgto-media{grid-column:2;grid-template-columns:1fr 1fr}.lgto-media .project-image img{height:210px}.reference-equipment{grid-template-columns:1fr 1fr}.intro-profile{gap:13px}.intro-profile img{width:76px;height:96px}}
 @media(max-width:620px){.hero-slide .hero-image{min-height:355px;height:355px;flex:none}.hero-slide figcaption{min-height:64px}.carousel-controls{justify-content:space-between;gap:8px}.carousel-controls>button{padding:7px 10px}.slide-dot{width:24px}.slide-dot:after{left:9px}.slide-dot[aria-pressed="true"]:after{left:8px}.intro-profile img{width:88px;height:110px}.lgto-media{grid-column:1;gap:16px}.lgto-media .project-image img{height:190px}.lgto-media figcaption{font-size:.75rem}.reference-equipment{grid-template-columns:1fr}.lightbox-media{width:82vw;height:60vh}.thesis-actions .button{padding:12px 15px;font-size:.84rem}}
 @media print{.hero-carousel,.lgto-media{display:none}.intro-profile img{width:60px;height:75px}}
+
+/* Concise project contributions and figures from the public thesis. */
+.project-summary{margin:24px 0;padding:0;border-top:1px solid var(--line)}
+.project-summary>div{padding:14px 0;border-bottom:1px solid var(--line)}
+.project-summary dt{font-size:.77rem;font-weight:700;color:var(--blue);margin-bottom:5px}
+.project-summary dd{margin:0;font-size:.92rem;line-height:1.7;color:var(--muted)}
+.research-result{margin:30px 0 0;padding-top:26px;border-top:1px solid var(--line);min-width:0}
+.lgto-feature>.research-result{grid-column:2 / -1}
+.research-result .image-button{background:white;padding:16px 0 38px}
+.research-result .image-button img{width:100%;height:auto;max-height:360px;object-fit:contain}
+.research-result .image-button:hover img{transform:none}
+.research-result figcaption{margin-top:16px}
+.research-result figcaption strong{font-size:1rem;font-weight:600}
+.research-result figcaption p{font-size:.9rem;line-height:1.7;margin:8px 0}
+.research-result figcaption a{font-size:.8rem}
+@media(max-width:620px){.lgto-feature>.research-result{grid-column:1}.research-result .image-button{padding:8px 0 38px}.research-result figcaption p{font-size:.88rem}}
